@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID", "SOLID\SOLID.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibility", "SingleResponsibility\SingleResponsibility.csproj", "{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed", "OpenClosed\OpenClosed.csproj", "{5419554F-6300-41A9-99BD-35719144C91C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5419554F-6300-41A9-99BD-35719144C91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5419554F-6300-41A9-99BD-35719144C91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5419554F-6300-41A9-99BD-35719144C91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5419554F-6300-41A9-99BD-35719144C91C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
