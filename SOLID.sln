@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID", "SOLID\SOLID.csproj", "{7ED86B6C-EE1D-43D8-B928-0C7A98B0DF93}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibility", "SingleResponsibility\SingleResponsibility.csproj", "{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed", "OpenClosed\OpenClosed.csproj", "{5419554F-6300-41A9-99BD-35719144C91C}"
@@ -12,10 +10,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7ED86B6C-EE1D-43D8-B928-0C7A98B0DF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7ED86B6C-EE1D-43D8-B928-0C7A98B0DF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7ED86B6C-EE1D-43D8-B928-0C7A98B0DF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7ED86B6C-EE1D-43D8-B928-0C7A98B0DF93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAC2D942-F1E6-47A2-BF3F-9C1372F121CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
