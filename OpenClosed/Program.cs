@@ -2,13 +2,10 @@
 
 using OpenClosed;
 
-var otProd = new OneTimeProduct();
-var perProd = new PeriodicalProduct
-{
-    OtProduct = otProd
-};
+var otProd = new OneTimeProduct(name: "p1", price: 5);
+var perProd = new PeriodicalProduct(name: "p2", price: 10, otProduct: otProd);
 
-var otProd2 = new OneTimeProduct();
+var otProd2 = new OneTimeProduct(name: "p3", price: 15);
 
 var basket = new Basket();
 basket.AddProduct(perProd);

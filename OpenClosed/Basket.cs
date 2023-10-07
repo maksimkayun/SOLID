@@ -2,29 +2,16 @@
 
 public class Basket
 {
-    private List<PeriodicalProduct> PeriodicalProducts { get; set; } = new();
-    private List<OneTimeProduct> OneTimeProducts { get; set; } = new();
+    private List<Product> Products { get; set; } = new();
 
-    private void AddOneTimeProduct(OneTimeProduct product)
+    public void AddProduct(Product product)
     {
-        OneTimeProducts.Add(product);
+        Products.Add(product);
     }
 
-    private void AddPeriodicalProduct(PeriodicalProduct product)
-    {
-        PeriodicalProducts.Add(product);
-        AddOneTimeProduct(product.OtProduct);
-    }
-
-    public void AddProduct(object product)
-    {
-        if (product is PeriodicalProduct perProd)
-        {
-            AddPeriodicalProduct(perProd);
-        } 
-        else if (product is OneTimeProduct otProd)
-        {
-            AddOneTimeProduct(otProd);
-        }
-    }
+    public List<OneTimeProduct> GetOneTimeProducts =>
+        Products.OfType<OneTimeProduct>().ToList();
+    
+    public List<PeriodicalProduct> GetPeriodicalProducts =>
+        Products.OfType<PeriodicalProduct>().ToList();
 }

@@ -1,6 +1,8 @@
 ﻿namespace OpenClosed;
 
-public class OneTimeProduct
+public class OneTimeProduct : Product
 {
-    public decimal OtPrice { get; set; }
+    public OneTimeProduct(string name, decimal price) : base(name, price)
+    {
+    }
 }
