@@ -1,0 +1,22 @@
+﻿@startuml
+
+class Product {
+  + Name: string
+  + Price: double
+
+  + Product(name: string, price: double)
+}
+
+class Basket {
+  - Products: List<Product>
+  - QuantityOfProducts: Dictionary<string, int>
+
+  + AddProduct(product: Product, quantity: int)
+  + GetTotalDescriptionOfProducts(): string
+  + CalculateTotalPriceByProductName(productName: string): double
+  + CalculateTotalPrice(): double
+}
+
+Product --o Basket
+
+@enduml
