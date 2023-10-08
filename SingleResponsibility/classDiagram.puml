@@ -17,6 +17,7 @@ class Basket {
   + CalculateTotalPrice(): double
 }
 
-Product --o Basket
+'ассоциация
+Basket --> Product : Contains
 
 @enduml
