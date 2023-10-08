@@ -1,0 +1,31 @@
+﻿@startuml
+
+abstract class Product {
+  # Price: decimal
+  # Name: string
+
+  + Product(name: string, price: decimal)
+}
+
+class PeriodicalProduct {
+  - OtProduct: OneTimeProduct
+  + PeriodicalProduct(name: string, price: decimal, otProduct: OneTimeProduct)
+}
+
+class OneTimeProduct {
+  + OneTimeProduct(name: string, price: decimal)
+}
+
+class Basket {
+  - Products: List<Product>
+
+  + AddProduct(product: Product)
+  + GetOneTimeProducts: List<OneTimeProduct>
+  + GetPeriodicalProducts: List<PeriodicalProduct>
+}
+
+Product <|-- PeriodicalProduct
+Product <|-- OneTimeProduct
+Basket "1" -- "*" Product : Contains
+
+@enduml
