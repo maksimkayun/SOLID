@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibility", "Sin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed", "OpenClosed\OpenClosed.csproj", "{5419554F-6300-41A9-99BD-35719144C91C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{9A3BAAC0-1CE1-419D-BE44-BCD1D64D0964}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{5419554F-6300-41A9-99BD-35719144C91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5419554F-6300-41A9-99BD-35719144C91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5419554F-6300-41A9-99BD-35719144C91C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A3BAAC0-1CE1-419D-BE44-BCD1D64D0964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3BAAC0-1CE1-419D-BE44-BCD1D64D0964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3BAAC0-1CE1-419D-BE44-BCD1D64D0964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3BAAC0-1CE1-419D-BE44-BCD1D64D0964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
