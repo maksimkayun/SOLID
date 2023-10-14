@@ -2,7 +2,7 @@
 
 namespace DependencyInjection.Implementation;
 
-public class OraRepository
+public class OraRepository : IRepository
 {
     public Auto CreateAuto(Auto auto)
     {

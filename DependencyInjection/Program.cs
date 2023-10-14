@@ -9,6 +9,6 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        var service = new AutoService(new PgRepository(), new OraRepository());
+        var service = new AutoService(RepositoryCreator.CreateRepository(usePg: bool.Parse(Environment.GetEnvironmentVariable("USE_PG") ?? "false")));
     }
 }

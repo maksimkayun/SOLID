@@ -2,7 +2,7 @@
 
 namespace DependencyInjection.Implementation;
 
-public class PgRepository
+public class PgRepository : IRepository
 {
     public Auto CreateAuto(Auto auto)
     {

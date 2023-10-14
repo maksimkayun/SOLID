@@ -7,16 +7,14 @@ namespace DependencyInjection.Services;
 
 public class AutoService
 {
-    private readonly PgRepository _pgRepository;
-    private readonly OraRepository _oraRepository;
+    private readonly IRepository _repository;
 
-    public AutoService(PgRepository pgRepository, OraRepository oraRepository)
+    public AutoService(IRepository repository)
     {
-        _pgRepository = pgRepository;
-        _oraRepository = oraRepository;
+        _repository = repository;
     }
 
-    public AutoDto ProcessAuto(ActionEnum action, string serialNumber, AutoDto? autoDto = null, bool usePg = false)
+    public AutoDto ProcessAuto(ActionEnum action, string serialNumber, AutoDto? autoDto = null)
     {
         var auto = MapUtil<AutoDto, Auto>.Map(autoDto);
 
@@ -24,24 +22,19 @@ public class AutoService
         {
             ActionEnum.Add => MapUtil<Auto, AutoDto>.Map(Process(
                 auto,
-                usePg
-                    ? e => _pgRepository.CreateAuto(e)
-                    : e => _oraRepository.CreateAuto(e)
+                e => _repository.CreateAuto(e)
             )),
             ActionEnum.Get => MapUtil<Auto, AutoDto>.Map(Process(
                 auto,
-                usePg
-                    ? e => _pgRepository.GetAuto(e.SerialNumber)
-                    : e => _oraRepository.GetAuto(e.SerialNumber))),
+                e => _repository.GetAuto(e.SerialNumber)
+            )),
             ActionEnum.Update => MapUtil<Auto, AutoDto>.Map(Process(
                 auto,
-                usePg
-                    ? e => _pgRepository.UpdateAuto(e.SerialNumber, e)
-                    : e => _oraRepository.UpdateAuto(e.SerialNumber, e))),
+                e => _repository.UpdateAuto(e.SerialNumber, e)
+            )),
             ActionEnum.Delete => MapUtil<Auto, AutoDto>.Map(Process(auto,
-                usePg
-                    ? e => _pgRepository.DeleteAuto(e.SerialNumber)
-                    : e => _oraRepository.DeleteAuto(e.SerialNumber))),
+                e => _repository.DeleteAuto(e.SerialNumber)
+            )),
             _ => throw new ArgumentOutOfRangeException(nameof(action), action, null)
         };
     }
