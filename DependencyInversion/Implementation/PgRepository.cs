@@ -1,8 +1,8 @@
-﻿using DependencyInjection.Models;
+﻿using DependencyInversion.Models;
 
-namespace DependencyInjection.Implementation;
+namespace DependencyInversion.Implementation;
 
-public class OraRepository
+public class PgRepository
 {
     public Auto CreateAuto(Auto auto)
     {

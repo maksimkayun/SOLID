@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace DependencyInjection;
+namespace DependencyInversion;
 
 public class MapperFactory<S,D> 
 {

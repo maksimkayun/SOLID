@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace DependencyInjection.Mapping;
+namespace DependencyInversion.Mapping;
 
 public static class MapUtil<S,D>
 {
