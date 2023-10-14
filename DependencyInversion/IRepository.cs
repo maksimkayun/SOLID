@@ -1,6 +1,6 @@
-﻿using DependencyInjection.Models;
+﻿using DependencyInversion.Models;
 
-namespace DependencyInjection;
+namespace DependencyInversion;
 
 public interface IRepository
 {

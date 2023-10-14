@@ -1,9 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DependencyInjection.Implementation;
-using DependencyInjection.Services;
+using DependencyInversion.Services;
+using DependencyInversion.Implementation;
 
-namespace DependencyInjection;
+namespace DependencyInversion;
 
 public static class Program
 {

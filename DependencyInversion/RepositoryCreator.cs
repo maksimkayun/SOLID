@@ -1,6 +1,6 @@
-﻿using DependencyInjection.Implementation;
+﻿using DependencyInversion.Implementation;
 
-namespace DependencyInjection;
+namespace DependencyInversion;
 
 public class RepositoryCreator
 {

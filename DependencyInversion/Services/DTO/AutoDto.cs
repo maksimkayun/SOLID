@@ -1,4 +1,4 @@
-﻿namespace DependencyInjection.Services.DTO;
+﻿namespace DependencyInversion.Services.DTO;
 
 public class AutoDto
 {

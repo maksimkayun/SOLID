@@ -1,9 +1,9 @@
-﻿using DependencyInjection.Implementation;
-using DependencyInjection.Mapping;
-using DependencyInjection.Models;
-using DependencyInjection.Services.DTO;
+﻿using DependencyInversion.Mapping;
+using DependencyInversion.Models;
+using DependencyInversion.Services.DTO;
+using DependencyInversion.Implementation;
 
-namespace DependencyInjection.Services;
+namespace DependencyInversion.Services;
 
 public class AutoService
 {

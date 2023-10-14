@@ -1,4 +1,4 @@
-﻿namespace DependencyInjection.Models;
+﻿namespace DependencyInversion.Models;
 
 public abstract class Auto
 {
