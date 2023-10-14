@@ -20,29 +20,26 @@ public class AutoService
 
         return action switch
         {
-            ActionEnum.Add => MapUtil<Auto, AutoDto>.Map(Process(
+            ActionEnum.Add => Process<Auto, AutoDto>(
                 auto,
                 e => _repository.CreateAuto(e)
-            )),
-            ActionEnum.Get => MapUtil<Auto, AutoDto>.Map(Process(
+            ),
+            ActionEnum.Get => Process<Auto, AutoDto>(
                 auto,
                 e => _repository.GetAuto(e.SerialNumber)
-            )),
-            ActionEnum.Update => MapUtil<Auto, AutoDto>.Map(Process(
+            ),
+            ActionEnum.Update => Process<Auto, AutoDto>(
                 auto,
                 e => _repository.UpdateAuto(e.SerialNumber, e)
-            )),
-            ActionEnum.Delete => MapUtil<Auto, AutoDto>.Map(Process(auto,
+            ),
+            ActionEnum.Delete => Process<Auto, AutoDto>(auto,
                 e => _repository.DeleteAuto(e.SerialNumber)
-            )),
+            ),
             _ => throw new ArgumentOutOfRangeException(nameof(action), action, null)
         };
     }
 
-    private static T Process<T>(T arg ,Func<T, T> func)
-    {
-        return func(arg);
-    }
+    private static R Process<T, R>(T arg ,Func<T, T> func) => MapUtil<T, R>.Map(func(arg));
 
     public enum ActionEnum
     {
