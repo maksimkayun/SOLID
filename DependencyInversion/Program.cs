@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DependencyInversion.Services;
-using DependencyInversion.Implementation;
 
 namespace DependencyInversion;
 

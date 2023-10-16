@@ -1,0 +1,56 @@
+﻿@startuml
+
+class AutoService {
+  +AutoService(IRepository repository)
+  +ProcessAuto(action: ActionEnum, serialNumber: string, autoDto: AutoDto?): AutoDto
+}
+
+interface IRepository {
+  +CreateAuto(auto: Auto): Auto
+  +GetAuto(serialNumber: string): Auto
+  +UpdateAuto(serialNumber: string, auto: Auto): Auto
+  +DeleteAuto(serialNumber: string): Auto
+}
+
+class PgRepository {
+  +CreateAuto(auto: PgAuto): PgAuto
+  +GetAuto(serialNumber: string): PgAuto
+  +UpdateAuto(serialNumber: string, auto: PgAuto): PgAuto
+  +DeleteAuto(serialNumber: string): PgAuto
+}
+
+class OraRepository {
+  +CreateAuto(auto: OraAuto): OraAuto
+  +GetAuto(serialNumber: string): OraAuto
+  +UpdateAuto(serialNumber: string, auto: OraAuto): OraAuto
+  +DeleteAuto(serialNumber: string): OraAuto
+}
+
+class Auto {
+  +SerialNumber: string
+}
+
+class AutoDto {
+  +SerialNumber: string
+  +Name: string
+  +Model: string
+  +ReleaseDate: DateTime
+}
+
+AutoService --|> IRepository
+AutoService : Uses
+
+AutoService --|> Auto
+AutoService : Contains
+
+AutoService --|> AutoDto
+
+AutoService --> RepositoryCreator : Creates
+
+RepositoryCreator --|> IRepository
+RepositoryCreator --|> PgRepository
+RepositoryCreator --|> OraRepository
+
+IRepository *-- Auto
+
+@enduml
